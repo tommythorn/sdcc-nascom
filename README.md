@@ -24,4 +24,4 @@ For a kludgy workaround: http://sourceforge.net/p/sdcc/feature-requests/399/
 
 * Similarily, but less important: my hack to put init at `0x1000` and `code-loc 0x1004` isn't very elegant.  Surely one could do better?
 
-* Stack pointer is hardwire to start at `0xE000` (the end of ROM Basic); might be better if it could automatically find the end of RAM or otherwise be configurable.
+* Stack pointer is hardwired to start at `0xE000` (the end of ROM Basic); might be better if it could automatically find the end of RAM or otherwise be configurable.

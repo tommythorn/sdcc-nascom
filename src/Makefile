@@ -1,4 +1,4 @@
-all: demos/editor2.ihx demos/hw.ihx demos/sieve.ihx demos/j.ihx
+all: demos/nasmacs.ihx demos/hw.ihx demos/sieve.ihx demos/j.ihx
 
 %.ihx: %.c crt0_nascom.rel
 	@echo SDCC $<
