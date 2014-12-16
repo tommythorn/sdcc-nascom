@@ -1,17 +1,25 @@
-/*
-OMGs: You cannot enter ` nor ~ on the Nascom keyboard?
-*/
 #include <stdio.h>
+
+#define N 6000
+
+static char cand[N];
 
 int main()
 {
-  int k, f;
+    int i;
+    char *j;
 
-  for (k = 2;; ++k) {
-    for (f = 2; f < k-1; ++f)
-      if (k % f == 0)
-	goto skip;
-    printf("%5d ", k);
-  skip:;
-  }
+    for (i = 2; i < N; ++i) {
+        if (!cand[i]) {
+            printf(" %d", i);
+            j = cand + i;
+            if (j < cand + N)
+                do {
+                    *j = 1;
+                    j += i;
+                } while (j < cand + N);
+        }
+    }
+
+    return 0;
 }
